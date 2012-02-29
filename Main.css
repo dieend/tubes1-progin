@@ -1,0 +1,80 @@
+body{
+    background-image:url(images/bg-shadow.jpg);
+    background-position: top;
+    background-repeat: repeat-y;
+    background-color: white;
+    font-family: sans-serif, fantasy;
+    font-size: 12;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#bagian_luar{
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 800px;
+}
+#luar{
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 800px;
+}
+#kepala{
+    margin: 0 auto;
+    padding: 0 auto;
+    background-color: white;
+    width: 300px;
+    height: 150px;
+    float: none;
+    border: 0;
+    
+}
+#list_menu{
+    background-color: greenyellow;
+    background: url(images/greentab.jpg);
+    width: 800px;
+    height: 33px;
+    float: left;
+}
+ul{
+    display: block;
+    cursor: pointer;
+    padding-left: 0px;
+    margin: 0px;
+}
+li{
+    float: left;
+    list-style-type: none;
+    padding: 9px 25px 9px 25px;
+    background: url(images/greentab.jpg);
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    color: white;
+}
+li a{
+    text-decoration: none;
+    color: white;
+}
+li:hover{
+    background: greenyellow;
+    background-image: url(images/hover-greentab.jpg);
+    color: black;
+}
+#header_gambar{
+    width: 800;
+    height: 250;
+}
+.top_content{
+    background-color: white;
+    width: 800px;
+}
+#footer{
+    background-image: url(images/footer.jpg);
+    background-position: bottom;
+    width: 800px;
+    text-align: center;
+    vertical-align: top;
+    margin-top: 40px;
+}
