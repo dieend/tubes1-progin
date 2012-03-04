@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <title>TUGAS BESAR PROGIN 1</title>
+        <link href="Main.css" type="text/css" rel="stylesheet" media="screen"/>
+<!--        <script src="Listkontent.js" type="text/javascript"></script>-->
+        <script type="text/javascript">
+            var like1 = 0;
+            var dislike1 = 0;
+            var like2 = 0;
+            var dislike2 = 0;
+            var like3 = 0;
+            var dislike3 = 0;
+        </script>
+    </head>
+    
+    <body>
+        <div id="bagian_luar">
+            <div id="luar">
+                <div id="kepala">
+                    <a href="Main.html"><img src="images/logo.jpg" width="300" height="150" alt="dafuq"></img> </a>
+                </div>
+                <div id="cari"></div>
+                <div id="list_menu">
+                    <ul>
+                        <li><a href="Main.html">HOME</a></li>
+                        <li><a href="Content.html">Content</a></li>
+                        <li><a href="Post.html">Post</a></li>
+                        <li><a href="MENU5.html">Change Theme</a></li>
+                        <li><a href="Daftar.html">Sign up</a></li>
+                    </ul>
+                </div>
+                <div id="header_gambar">
+                    <img src="images/header.jpg" width="800" height="200" alt="dafuq"></img>
+                </div>
+                <div class="top_content">
+                    <img src="images/orn_top.jpg" alt="dafuq"></img><br />
+                </div>
+                <div id="konten">
+                    
+                        <table>
+                            <tr>
+                                <td align="center" valign="top"><h2><a href="link.html">Type Link</a></h2></td>
+                                <td valign="bottom"></td>
+                            </tr>
+                            <tr>
+                                <td valign="top"><p>dagajflkasjdlksajd;ksajf;slafmk;asmf;kasmf
+                                    ldsadskajdklsajdklsajdsdasdasfasfasfasdfasddsadksladjkl</p></td>
+                                <td valign="top">
+                                    <h3>03-03-2012</h3>
+                                    <p>posted by dafuq</p>
+                                    <p>-----------------------</p>
+                                    <label><input type="text" name="coba" id="like_vote1" size="5" readonly="readonly"></input></label>
+                                    <img src="images/minus.jpg" alt="minus" width="30" height="15"></img>
+                                    <label><input type="text" name="coba" id="dislike_vote1" size="5" readonly="readonly"></input></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9gag.com</td>
+                                <td valign="top">
+                                    <input type="image" src="images/like.jpg" name="like" class="like_button" onclick="like1 = like1 + 1; document.getElementById('like_vote1').value = like1;"></input>
+                                    <img src="images/minus.jpg" alt="minus" width="30" height="50"></img>
+                                    <input type="image" src="images/dislike.jpg" name="dislike" class="like_button" onclick="dislike1 = dislike1 + 1; document.getElementById('dislike_vote1').value = dislike1;"></input>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td align="center" valign="top"><h2><a href="Image.html">Type gambar</a></h2></td>
+                                <td valign="bottom"></td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <img src="images/yui.jpg" alt="gambar" width="300" height="150"></img>
+                                </td>
+                                <td valign="bottom">
+                                    <h3>03-03-2012</h3>
+                                    <p>posted by dafuq</p>
+                                    <p>-----------------------</p>
+                                    <label><input type="text" name="coba" id="like_vote2" size="5" readonly="readonly"></input></label>
+                                    <img src="images/minus.jpg" alt="minus" width="40" height="15"></img>
+                                    <label><input type="text" name="coba" id="dislike_vote2" size="5" readonly="readonly"></input></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td valign="top">
+                                    <input type="image" src="images/like.jpg" name="like" class="like_button" onclick="like2 = like2 + 1; document.getElementById('like_vote2').value = like2;"></input>
+                                    <img src="images/minus.jpg" alt="minus" width="30" height="50"></img>
+                                    <input type="image" src="images/dislike.jpg" name="dislike" class="like_button" onclick="dislike2 = dislike2 + 1; document.getElementById('dislike_vote2').value = dislike2;"></input>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td align="center" valign="top"><h2><a href="Video.html">Type Video</a></h2></td>
+                                <td valign="bottom"></td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <object type="application/x-shockwave-flash" style="width:300px; height:200px;" data="http://www.youtube.com/v/7_6B6vwE83U">
+                                        <param name="movie" value="http://www.youtube.com/v/7_6B6vwE83U" /></object>
+                                </td>
+                                <td valign="middle">
+                                    <h3>03-03-2012</h3>
+                                    <p>posted by dafuq</p>
+                                    <p>---------------</p>
+                                    <label><input type="text" name="coba" id="like_vote3" size="5" readonly="readonly"></input></label>
+                                    <img src="images/minus.jpg" alt="minus" width="40" height="15"></img>
+                                    <label><input type="text" name="coba" id="dislike_vote3" size="5" readonly="readonly"></input></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td valign="top">
+                                    <input type="image" src="images/like.jpg" name="like" class="like_button" onclick="like3 = like3 + 1; document.getElementById('like_vote3').value = like3;"></input>
+                                    <img src="images/minus.jpg" alt="minus" width="30" height="50"></img>
+                                    <input type="image" src="images/dislike.jpg" name="dislike" class="like_button" onclick="dislike3 = dislike3 + 1; document.getElementById('dislike_vote3').value = dislike3;"></input>
+                                </td>
+                            </tr>
+                        </table>
+                    
+                </div>
+                <div class="top_content">
+                    <img src="images/orn_bottom.jpg" alt="dafuq"></img><br />
+                </div>
+                <div id="footer">
+                    Copyright dafuq <br /><br />
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
