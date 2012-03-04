@@ -1,10 +1,30 @@
-function doLike(){
-    var postNumber = this.parentNode.className.toString();
-    postNumber = postNumber[postNumber.length-1];
-    alert(postNumber);
+function doLike(postNumber){
+    var d = document.getElementById("like_vote"+String(postNumber));
+    if (hasClass(d, "no_vote")) {
+        d.textContent = Number(d.textContent)+1;
+        removeClass(d, "no_vote");
+        addClass(d,"good_vote");
+    } else if (hasClass(d,"bad_vote")){
+        d.textContent = Number(d.textContent)+1;
+        removeClass(d, "bad_vote");
+        addClass(d,"no_vote");
+    } else if (hasClass(d,"good_vote")){
+        
+    }
 }
-function doUnlike(){
-    
+function doUnlike(postNumber){
+    var d = document.getElementById("like_vote"+String(postNumber));
+    if (hasClass(d, "no_vote")) {
+        d.textContent = Number(d.textContent)-1;
+        removeClass(d, "no_vote");
+        addClass(d,"bad_vote");
+    } else if (hasClass(d,"bad_vote")){
+        
+    } else if (hasClass(d,"good_vote")){
+        d.textContent = Number(d.textContent)-1;
+        removeClass(d, "good_vote");
+        addClass(d,"no_vote");
+    }
 }
 function sort_by_number_of_like(a,b){
     
@@ -26,4 +46,19 @@ function initRandomLike(lengthPost){
         document.getElementById("content_"+String(i)).appendChild(data[i-1][1]);
     }
     
+}
+
+function hasClass(ele,cls) {
+	return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+ 
+function addClass(ele,cls) {
+	if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+ 
+function removeClass(ele,cls) {
+	if (hasClass(ele,cls)) {
+    	var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+		ele.className=ele.className.replace(reg,' ');
+	}
 }
