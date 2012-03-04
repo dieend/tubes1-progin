@@ -1,17 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//Ddiv XHTML 1.0 Sdivict//EN" "http://www.w3.org/div/xhtml1/Ddiv/xhtml1-sdivict.ddiv">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
     <head>
         <title>TUGAS BESAR PROGIN 1</title>
         <link href="Main.css" type="text/css" rel="stylesheet" media="screen"/>
 <!--        <script src="Listkontent.js" type="text/javascript"></script>-->
-        <script type="text/javascript">
-            var like1 = 0;
-            var dislike1 = 0;
-            var like2 = 0;
-            var dislike2 = 0;
-            var like3 = 0;
-            var dislike3 = 0;
-        </script>
+        <script type="text/javascript" src="assets/like.js"></script>
     </head>
     
     <body>
@@ -37,87 +30,90 @@
                     <img src="images/orn_top.jpg" alt="dafuq"></img><br />
                 </div>
                 <div id="konten">
-                    
-                        <table>
-                            <tr>
-                                <td align="center" valign="top"><h2><a href="link.html">Type Link</a></h2></td>
-                                <td valign="bottom"></td>
-                            </tr>
-                            <tr>
-                                <td valign="top"><p>dagajflkasjdlksajd;ksajf;slafmk;asmf;kasmf
-                                    ldsadskajdklsajdklsajdsdasdasfasfasfasdfasddsadksladjkl</p></td>
-                                <td valign="top">
-                                    <h3>03-03-2012</h3>
-                                    <p>posted by dafuq</p>
+                    <div id="content_1" class="content">
+                        <div class="content_data">
+                            <div class="content_header">
+                                <div><h2><a href="link.html">Type Link</a></h2></div>
+                            </div>
+                            <div class="content_body">
+                                <div class="content_caption">
+                                    <p>dagajflkasjdlksajd;ksajf;slafmk;asmf;kasmf
+                                    ldsadskajdklsajdklsajdsdasdasfasfasfasdfasddsadksladjkl</p>
+                                </div>
+                                <div class="content_entry content_type_link">    
+                                    <p>9gag.com</p>
+                                </div>
+                            </div>
+                            <div class="content_signature">
+                                <div>
+                                    <h3 class="content_date">03-03-2012</h3>
+                                    <p class="content_poster">posted by dafuq</p>
                                     <p>-----------------------</p>
-                                    <label><input type="text" name="coba" id="like_vote1" size="5" readonly="readonly"></input></label>
-                                    <img src="images/minus.jpg" alt="minus" width="30" height="15"></img>
-                                    <label><input type="text" name="coba" id="dislike_vote1" size="5" readonly="readonly"></input></label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>9gag.com</td>
-                                <td valign="top">
-                                    <input type="image" src="images/like.jpg" name="like" class="like_button" onclick="like1 = like1 + 1; document.getElementById('like_vote1').value = like1;"></input>
+                                    <label class="vote no_vote" id="like_vote1"></label>
+                                </div>
+                                <div id="button1">
+                                    <img src="images/like.jpg" class="like_button" onclick="doLike()"></img>
                                     <img src="images/minus.jpg" alt="minus" width="30" height="50"></img>
-                                    <input type="image" src="images/dislike.jpg" name="dislike" class="like_button" onclick="dislike1 = dislike1 + 1; document.getElementById('dislike_vote1').value = dislike1;"></input>
-                                </td>
-                            </tr>
-                            
-                            <tr>
-                                <td align="center" valign="top"><h2><a href="Image.html">Type gambar</a></h2></td>
-                                <td valign="bottom"></td>
-                            </tr>
-                            <tr>
-                                <td valign="top">
+                                    <img src="images/dislike.jpg" class="unlike_button" onclick="doUnlike()"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="content_2"class="content">
+                        <div class="content_data">
+                            <div class="content_header">
+                                <div><h2><a href="Image.html">Type gambar</a></h2></div>
+                            </div>
+                            <div class="content_body">
+                                <div class="content_caption"></div>
+                                <div class="content_entry content_type_image">
                                     <img src="images/yui.jpg" alt="gambar" width="300" height="150"></img>
-                                </td>
-                                <td valign="bottom">
-                                    <h3>03-03-2012</h3>
-                                    <p>posted by dafuq</p>
+                                </div>
+                            </div>
+                            <div class="content_signature">
+                                <div>
+                                    <h3 class="content_date">03-03-2012</h3>
+                                    <p class="content_poster">posted by dafuq</p>
                                     <p>-----------------------</p>
-                                    <label><input type="text" name="coba" id="like_vote2" size="5" readonly="readonly"></input></label>
-                                    <img src="images/minus.jpg" alt="minus" width="40" height="15"></img>
-                                    <label><input type="text" name="coba" id="dislike_vote2" size="5" readonly="readonly"></input></label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td valign="top">
-                                    <input type="image" src="images/like.jpg" name="like" class="like_button" onclick="like2 = like2 + 1; document.getElementById('like_vote2').value = like2;"></input>
+                                    <label class="vote no_vote" id="like_vote2"></label>
+                                </div>
+                                <div id="button2">
+                                    <img src="images/like.jpg" class="like_button" onclick="doLike()"></img>
                                     <img src="images/minus.jpg" alt="minus" width="30" height="50"></img>
-                                    <input type="image" src="images/dislike.jpg" name="dislike" class="like_button" onclick="dislike2 = dislike2 + 1; document.getElementById('dislike_vote2').value = dislike2;"></input>
-                                </td>
-                            </tr>
-                            
-                            <tr>
-                                <td align="center" valign="top"><h2><a href="Video.html">Type Video</a></h2></td>
-                                <td valign="bottom"></td>
-                            </tr>
-                            <tr>
-                                <td valign="top">
+                                    <img src="images/dislike.jpg" class="unlike_button" onclick="doUnlike()"></img>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="content_3"class="content">
+                        <div class="content_data">
+                            <div class="content_header">
+                                <div ><h2><a href="Video.html">Type Video</a></h2></div>
+                            </div>
+                            <div class="content_body">
+                                <div class="content_caption"></div>
+                                <div class="content_entry content_type_video">
                                     <object type="application/x-shockwave-flash" style="width:300px; height:200px;" data="http://www.youtube.com/v/7_6B6vwE83U">
                                         <param name="movie" value="http://www.youtube.com/v/7_6B6vwE83U" /></object>
-                                </td>
-                                <td valign="middle">
+                                </div>
+                            </div>
+                            <div class="content_signature">
+                                <div>
                                     <h3>03-03-2012</h3>
                                     <p>posted by dafuq</p>
                                     <p>---------------</p>
-                                    <label><input type="text" name="coba" id="like_vote3" size="5" readonly="readonly"></input></label>
-                                    <img src="images/minus.jpg" alt="minus" width="40" height="15"></img>
-                                    <label><input type="text" name="coba" id="dislike_vote3" size="5" readonly="readonly"></input></label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td valign="top">
-                                    <input type="image" src="images/like.jpg" name="like" class="like_button" onclick="like3 = like3 + 1; document.getElementById('like_vote3').value = like3;"></input>
+                                    <label class="vote no_vote" id="like_vote3"></label>
+                                </div>
+                                <div id="button3">
+                                    <img src="images/like.jpg" class="like_button" onclick="doLike()"></img>
                                     <img src="images/minus.jpg" alt="minus" width="30" height="50"></img>
-                                    <input type="image" src="images/dislike.jpg" name="dislike" class="like_button" onclick="dislike3 = dislike3 + 1; document.getElementById('dislike_vote3').value = dislike3;"></input>
-                                </td>
-                            </tr>
-                        </table>
-                    
+                                    <img src="images/dislike.jpg" class="unlike_button" onclick="doUnlike()"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="top_content">
                     <img src="images/orn_bottom.jpg" alt="dafuq"></img><br />
@@ -127,5 +123,8 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+            initRandomLike(3);
+        </script>
     </body>
 </html>
