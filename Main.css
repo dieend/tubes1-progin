@@ -78,3 +78,10 @@ li:hover{
     vertical-align: top;
     margin-top: 40px;
 }
+
+.hidden_preview{
+    display: none;
+}
+.preview {
+    display: block;
+}

@@ -1,8 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//Ddiv XHTML 1.0 Sdivict//EN" "http://www.w3.org/div/xhtml1/Ddiv/xhtml1-sdivict.ddiv">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
     <head>
         <title>TUGAS BESAR PROGIN 1</title>
         <link href="Main.css" type="text/css" rel="stylesheet" media="screen"/>
+        <script type="text/javascript" src="assets/preview.js"></script>
     </head>
     
     <body>
@@ -29,73 +30,79 @@
                 </div>
                 <div id="posting">
                     <br />
-                    <form method="post" action="">
-                    <table width="550" align="center" border="0" cellpadding="0" cellspacing="0">
-                        <tr>
-                            <td width="150" height="30" valign="top">Title</td>
-                            <td align='center' height="30" valign="top">:</td>
-                            <td>
-                                <label>
-                                    <input name="title" type="teks" class="field-teks" id="title" size="50" maxlength="15" ></input>
+                    <form method="post" action="" name="daform">
+                    <div>
+                        <div>
+                            <div>Title</div>
+                            <div class="separator">:</div>
+                            <div>
+                                <label for="title">
+                                    <input name="title" type="text" class="field-teks" id="title" size="50" maxlength="15" ></input>
                                 </label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="150" height="30">Type File</td>
-                            <td align='center' height="30">:</td>
-                            <td>
-                                <label><input name="type" type="radio" value="link" checked="yes">Link</input></label>
-                                <label><input name="type" type="radio" value="image">Image</input></label>
-                                <label><input name="type" type="radio" value="video">Video</input></label>   
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="150" height="30" valign="top">Post Link</td>
-                            <td align='center' height="30" valign="top">:</td>
-                            <td>
-                                <label>
-                                    <input name="link" type="teks" class="field-teks" id="link" size="50" maxlength="30" ></input>
+                            </div>
+                        </div>
+                        <div>
+                            <div>Type File</div>
+                            <div class="separator">:</div>
+                            <div>
+                                <label for="typelink"><input id="typelink" name="type" type="radio" value="link"></input>Link</label>
+                                <label for="typeimage"><input id="typeimage" name="type" type="radio" value="image"></input>Image</label>
+                                <label for="typevideo"><input id="typevideo" name="type" type="radio" value="video"></input>Video</label>   
+                            </div>
+                        </div>
+                        <div>
+                            <div>Post Link</div>
+                            <div class="separator">:</div>
+                            <div>
+                                <label for="link">
+                                    <input name="link" type="text" class="field-teks" id="link" size="50" maxlength="30" ></input>
                                 </label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="150" height="30" valign="top">Deskripsi Link</td>
-                            <td align='center' height="30" valign="top">:</td>
-                            <td>
-                                <label>
+                            </div>
+                        </div>
+                        <div>
+                            <div>Deskripsi Link</div>
+                            <div class="separator">:</div>
+                            <div>
+                                <label for="deskripsi_link">
                                     <textarea name="deskripsi_link" class="field-teks" cols="40" rows="3" id="deskripsi_link"></textarea>   
                                 </label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="150" height="30" valign="top">Post Image</td>
-                            <td align='center' height="30" valign="top">:</td>
-                            <td>
+                            </div>
+                        </div>
+                        <div>
+                            <div>Post Image</div>
+                            <div class="separator">:</div>
+                            <div>
                                 <label>
-                                    <input type="file" accept="images/jpeg"></input>
+                                    <input id="image" type="file" accept="images/jpeg"></input>
                                 </label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="200" height="30" valign="top">Post Link Video</td>
-                            <td align='center' height="30" valign="top">:</td>
-                            <td>
+                            </div>
+                        </div>
+                        <div>
+                            <div>Post Link Video</div>
+                            <div class="separator">:</div>
+                            <div>
+                                <label for="video">
+                                    <input name="video" type="text" class="field-teks" id="video" size="50" maxlength="30" ></input>
+                                </label>
+                            </div>
+                        </div>
+                        <div></div>
+                        <div>
+                            <div></div>
+                            <div></div>
+                            <div>
                                 <label>
-                                    <input name="video" type="teks" class="field-teks" id="video" size="50" maxlength="30" ></input>
+                                    <input name="tombol" type="button" value="post" 
+                                           onclick="preview(document.getElementById('title'),
+                                                document.getElementById('link'),
+                                                getCheckedValue(document.daform.elements['type']),
+                                                document.getElementById('deskripsi_link'),
+                                                document.getElementById('image'),
+                                                document.getElementById('video'))"></input>
                                 </label>
-                            </td>
-                        </tr>
-                        <tr height="30"></tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <label>
-                                    <input name="tombol" type="submit" value="post" onclick=""></input>
-                                </label>
-                            </td>
-                        </tr>
-                    </table>
+                            </div>
+                        </div>
+                    </div>
                     </form>     
                 </div>
                 <div class="top_content">
@@ -105,6 +112,44 @@
                     Copyright dafuq <br /><br />
                 </div>
             </div>
+            
+                <div class="hidden_preview" id="konten">
+                    <div id="content_1" class="content">
+                        <div class="content_data">
+                            <div class="content_header">
+                                <div><h2><a id ="preview_title" href="link.html">Type Link</a></h2></div>
+                            </div>
+                            <div class="content_body">
+                                <div class="content_caption">
+                                    <p id="preview_description"></p>
+                                </div>
+                                <div class="content_entry content_type_link">
+                                    <p id="preview_content_link"></p>
+                                </div>
+                                <div class="content_entry content_type_image">
+                                    <img id="preview_content_img" src="" alt="gambar" width="300" height="150"></img>
+                                </div>
+                                <div class="content_entry content_type_video">
+                                    <object id="preview_content_video" type="application/x-shockwave-flash" style="width:300px; height:200px;" data="http://www.youtube.com/v/7_6B6vwE83U">
+                                        <param name="movie" value="http://www.youtube.com/v/7_6B6vwE83U" /></object>
+                                </div>
+                            </div>
+                            <div class="content_signature">
+                                <div>
+                                    <h3 class="content_date"></h3>
+                                    <p class="content_poster">posted by dafuq</p>
+                                    <p>-----------------------</p>
+                                    <label class="vote no_vote" id="like_vote1"></label>
+                                </div>
+                                <div id="button1">
+                                    <img src="images/like.jpg" class="like_button" onclick="doLike()"></img>
+                                    <img src="images/minus.jpg" alt="minus" width="30" height="50"></img>
+                                    <img src="images/dislike.jpg" class="unlike_button" onclick="doUnlike()"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>            
         </div>
     </body>
 </html>
