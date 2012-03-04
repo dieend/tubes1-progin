@@ -1,27 +1,29 @@
 function doLike(){
-    if (this.parentNode.valueOf().className == "normal") {
-        this.parentNode.valueOf().className = "used";
-    }
+    var postNumber = this.parentNode.className.toString();
+    postNumber = postNumber[postNumber.length-1];
+    alert(postNumber);
 }
 function doUnlike(){
     
 }
 function sort_by_number_of_like(a,b){
-    return Number(a[0].textContent) - Number(b[0].textContent) ;
+    
+    return Number(b[0].textContent) - Number(a[0].textContent);
 }
 
 function initRandomLike(lengthPost){
-    var like_count = new Array(lengthPost);
-    var content = new Array(lengthPost);
-    var data = new Array(like_count, content);
+    var data = new Array(lengthPost);
     for (var i=1; i<=lengthPost; i++){
-        like_count[i-1] = document.getElementById("like_vote"+String(i));
-        like_count[i-1].textContent = Math.round(Math.random() * (50000 - 10000) + 10000);
-        content[i-1] = document.getElementById("content_"+String(i)).firstChild;
+        data[i-1] = new Array(2);
+        data[i-1][0] = document.getElementById("like_vote"+String(i));
+        data[i-1][0].textContent = Math.round(Math.random() * (50000 - 10000) + 10000);
+        data[i-1][1] = document.getElementById("content_"+String(i)).firstChild.nextSibling;
+        data[i-1][1] = document.getElementById("content_"+String(i)).removeChild(data[i-1][1]);
     }
+    
     data.sort(sort_by_number_of_like);
     for (i=1; i<=lengthPost; i++){
-        document.getElementById("content_"+String(i)).firstChild = content[i-1];
+        document.getElementById("content_"+String(i)).appendChild(data[i-1][1]);
     }
     
 }
