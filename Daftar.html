@@ -1,10 +1,133 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"> 
     <head>
         <title>TUGAS BESAR PROGIN 1</title>
-                <link href="Main.css" type="text/css" rel="stylesheet" media="screen"/>
+        <link href="Main.css" type="text/css" rel="stylesheet" media="screen"/>
+<!--        <script src="Listkontent.js" type="text/javascript"></script>-->
+        <script type="text/javascript">
+            function validasi(){    
+                var userid = document.getElementById("username").value;   
+                var passid = document.getElementById("password").value;
+                var conpassid = document.getElementById("confirm_password").value;
+                var tahunid = document.getElementById("tahun").value;
+                var bulanid = document.getElementById("bulan").value;
+                var hariid = document.getElementById("hari").value;
+                var fullid = document.getElementById("full_name").value;
+                var emailid = document.getElementById("email").value;
+                var avatarid = document.getElementById("avatar").value;
+                
+                if(userid_validation(userid)){
+                    if(passid_validation(userid,passid,conpassid)){              
+                        if(fullid_validation(fullid)){
+                            if(emailid_validation(emailid)){
+                                if(null_validation(tahunid,bulanid,hariid)){
+                                    if(imageid_validation(avatarid)){                                               
+                                    }
+                                }
+                            }
+                        }      
+                    }
+                }
+                return false;
+            }
+            function userid_validation(userid)
+            {
+                var userid_len = userid.length;
+                if(5 > userid_len)
+                {
+                    alert("User id minimal 5");
+                    userid.focus();
+                    return false;
+                }
+                return true;
+            }
+            function passid_validation(userid,passid,conpassid){
+                passid_len = passid.length;
+                if(passid_len != 0){
+                    if(8 > passid_len){
+                        alert("passid minimal 8 karakter");
+                        passid.focus();
+                        return false;
+                    }
+                    if(passid == userid){
+                        alert("passid sama user id ga boleh sama");
+                        passid.focus();
+                        return false;
+                    }
+                    if(passid != conpassid){
+                        alert("pass beda");
+                        passid.focus();
+                        return false;
+                    }
+                    //alert("imba"); 
+                    return true;
+                }
+                else
+                    alert("pass ga boleh kosong");
+                    return false;
+                       
+            }
+            function fullid_validation(fullid){
+                fullid_len = fullid.length;
+                for(i=0; fullid_len >= i; i++){
+                    if(fullid[i] == " "){
+                        //alert("ketemu");
+                        return true;
+                    }
+                }
+                alert("ga nemu");
+                return false;
+            }
+            function emailid_validation(emailid){
+                emailid_len = emailid.length;
+                var emailcek = /^[A-Z0-9._%+-]+\@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+                if(emailid_len != 0){
+                    if(emailid.search(emailcek) == -1){
+                        alert("email salah");
+                        return false;
+                    }
+                }
+                alert("email bener");
+                return true;
+                        
+            }
+            function null_validation(tahunid,bulanid,hariid){
+                tahunid_len = tahunid.lenght;
+                bulan_len = bulanid.lenght;
+                hari_len = hariid.lenght;
+                var numbers = /^[0-9]+$/
+                        
+                if(!tahunid.match(numbers) ||!bulanid.match(numbers) ||!hariid.match(numbers)){
+                    alert("isinya pake angka coy");
+                    return false;
+                }
+                else if(tahunid_len == 0 || bulan_len == 0 || hari_len == 0){
+                    alert("isi woy smuanya");
+                    return false;
+                }
+                else
+                    return true;
+            }
+            function imageid_validation(avatarid)
+            {
+                var extension = new Array("jpg","jpeg");
+                var image = avatarid;
+                var image_len = avatarid.length;
+                var pos = image.lastIndexOf('.')+1;
+                var ext = image.substring(pos, image_len);
+                var final_ext = ext.toLowerCase();
+                for(i=0; extension.length >= i; i++){
+                    if(extension[i] == final_ext){
+                        return true;
+                    }
+                }
+                alert("ekstensinya salah");
+                return false;
+            }
+        </script>
     </head>
-    
+
     <body>
         <div id="bagian_luar">
             <div id="luar">
@@ -29,69 +152,69 @@
                 </div>
                 <div id="sign">
                     <br />
-                    <form method="post" action="">
-                    <table width="550" align="middle" border="0" cellpadding="0" cellspacing="0">
-                        <tr>
-                                <td width="150" height="30" valign="top">Username</td>
-                                <td align="center" height="30" valign="top">:</td>
+                    <form id="registrasi" onsubmit="validasi()" action="">
+                        <table>
+                            <tr>
+                                <td>Username</td>
+                                <td>:</td>
                                 <td>
                                     <label>
-                                        <input name="username" type="text" class="field-teks" id="username" size="50" />    
+                                        <input name="username" type="text" class="field-teks" id="username" size="50" value="" />    
                                     </label></td>
                             </tr>
                             <tr>
-                                <td width="150" height="30" align="left">Password</td>
-                                <td width="15" align="center">:</td>
-                                <td width="335" height="30" align="left">
+                                <td >Password</td>
+                                <td >:</td>
+                                <td >
+                                    <label>
+                                        <input name="password" type="password" class="field-teks" id="password" size="50" />    
+                                    </label></td>
+                            </tr>
+                            <tr>
+                                <td >Confirm Password</td>
+                                <td >:</td>
+                                <td >
                                     <label>
                                         <input name="confirm_password" type="password" class="field-teks" id="confirm_password" size="50" />    
                                     </label></td>
                             </tr>
                             <tr>
-                                <td width="150" height="30" align="left">Confirm Password</td>
-                                <td width="15" align="center">:</td>
-                                <td width="335" height="30" align="left">
-                                    <label>
-                                        <input name="confirm_password" type="password" class="field-teks" id="password" size="50" />    
-                                    </label></td>
-                            </tr>
-                            <tr>
-                                <td width="150" height="30" align="left">Full Name</td>
-                                <td width="15" align="center">:</td>
-                                <td width="335" height="30" align="left">
+                                <td>Full Name</td>
+                                <td>:</td>
+                                <td>
                                     <label>
                                         <input name="full_name" type="text" class="field-teks" id="full_name" size="50" />    
                                     </label></td>
                             </tr>
                             <tr>
-                                <td width="200" height="30" align="left" >Birth Date(yyyy-mm-dd)</td>
-                                <td width="15" align="center">:</td>
-                                <td width="335">   
+                                <td >Birth Date(yyyy-mm-dd)</td>
+                                <td>:</td>
+                                <td>   
                                     <label><input name="tahun" type="text" id="tahun" size="8" maxlength="4" /></label> -
                                     <label><input name="bulan" type="text" id="bulan" size="4" maxlength="2" /></label> -
                                     <label><input name="hari" type="text" id="hari" size="4" maxlength="2" /></label>
                                 </td>
                             </tr>
                             <tr>
-                                <td width="150" height="30" align="left">Email</td>
-                                <td width="15" align="center">:</td>
-                                <td width="335" height="30" align="left">
+                                <td>Email</td>
+                                <td>:</td>
+                                <td>
                                     <label>
                                         <input name="email" type="text" class="field-teks" id="email" size="50" />    
                                     </label></td>
                             </tr>
                             <tr>
-                                <td width="150" height="30" align="left">Upload Avatar</td>
-                                <td width="15" align="center">:</td>
-                                <td width="335" height="30" align="left">
+                                <td>Upload Avatar</td>
+                                <td>:</td>
+                                <td>
                                     <label>
-                                        <input type="file" accept="images/jpeg,images/png"></input>
+                                        <input type="file" accept="images/jpeg,images/png" name="avatar" id="avatar"></input>
                                     </label></td>
                             </tr>
                             <tr>
-                                <td width="150" height="30" align="left">Gender</td>
-                                <td width="15" align="center">:</td>
-                                <td width="335" height="30" align="left">
+                                <td>Gender</td>
+                                <td>:</td>
+                                <td>
                                     <label>
                                         <select name="gender" id="gender">
                                             <option value="man">Man</option>
@@ -100,22 +223,22 @@
                                     </label></td>
                             </tr>
                             <tr>
-                                <td width="150" height="30" align="left" valign="top">About Me</td>
-                                <td width="15" align="center" valign="top">:</td>
-                                <td align="left">
+                                <td>About Me</td>
+                                <td>:</td>
+                                <td>
                                     <label>
                                         <textarea name="about" class="field-teks" cols="40" rows="6" id="about"></textarea>   
                                     </label></td>
                             </tr>
                             <tr>
-                                <td width="150" height="30" align="left"></td>
-                                <td width="15" align="center"></td>
-                                <td width="335" height="30" align="left">
+                                <td></td>
+                                <td></td>
+                                <td>
                                     <label>
                                         <input type="submit" value="submit" class="tombol" onclick="" />
                                     </label></td>
                             </tr>
-                    </table>
+                        </table>
                     </form>     
                 </div>
                 <div class="top_content">
