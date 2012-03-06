@@ -28,85 +28,8 @@
                 <div class="top_content">
                     <img src="images/orn_top.jpg" alt="dafuq"></img><br />
                 </div>
-                <div id="posting">
-                    <br />
-                    <form method="post" action="" name="daform">
-                    <div>
-                        <div>
-                            <div>Title</div>
-                            <div class="separator">:</div>
-                            <div>
-                                <label for="title">
-                                    <input name="title" type="text" class="field-teks" id="title" size="50" maxlength="15" ></input>
-                                </label>
-                            </div>
-                        </div>
-                        <div>
-                            <div>Type File</div>
-                            <div class="separator">:</div>
-                            <div>
-                                <label for="typelink"><input id="typelink" name="type" type="radio" value="link"></input>Link</label>
-                                <label for="typeimage"><input id="typeimage" name="type" type="radio" value="image"></input>Image</label>
-                                <label for="typevideo"><input id="typevideo" name="type" type="radio" value="video"></input>Video</label>   
-                            </div>
-                        </div>
-                        <div>
-                            <div>Post Link</div>
-                            <div class="separator">:</div>
-                            <div>
-                                <label for="link">
-                                    <input name="link" type="text" class="field-teks" id="link" size="50" maxlength="30" ></input>
-                                </label>
-                            </div>
-                        </div>
-                        <div>
-                            <div>Deskripsi Link</div>
-                            <div class="separator">:</div>
-                            <div>
-                                <label for="deskripsi_link">
-                                    <textarea name="deskripsi_link" class="field-teks" cols="40" rows="3" id="deskripsi_link"></textarea>   
-                                </label>
-                            </div>
-                        </div>
-                        <div>
-                            <div>Post Image</div>
-                            <div class="separator">:</div>
-                            <div>
-                                <label>
-                                    <input id="image" type="file" accept="images/jpeg"></input>
-                                </label>
-                            </div>
-                        </div>
-                        <div>
-                            <div>Post Link Video</div>
-                            <div class="separator">:</div>
-                            <div>
-                                <label for="video">
-                                    <input name="video" type="text" class="field-teks" id="video" size="50" maxlength="30" ></input>
-                                </label>
-                            </div>
-                        </div>
-                        <div></div>
-                        <div>
-                            <div></div>
-                            <div></div>
-                            <div>
-                                <label>
-                                    <input name="tombol" type="button" value="post" 
-                                           onclick="preview(document.getElementById('title'),
-                                                document.getElementById('link'),
-                                                getCheckedValue(document.daform.elements['type']),
-                                                document.getElementById('deskripsi_link'),
-                                                document.getElementById('image'),
-                                                document.getElementById('video'))"></input>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    </form>     
-                </div>
                 <div class="hidden_preview" id="konten">
-                    <div id="content_1" class="content">
+                    <div id="content_1" class="content padding_inbody">
                         <div class="content_data">
                             <div class="content_header">
                                 <div><h2><a id ="preview_title" href="link.html">Type Link</a></h2></div>
@@ -140,9 +63,84 @@
                                 </div>
                             </div>
                         </div>
+                        <input type="button" onclick="hide_preview()" value="ok"></input>
                     </div>
-                    <input type="button" onclick="hide_preview()">Ok</input>
                 </div>            
+                
+                <div id="posting">
+                    <br />
+                    <form method="post" action="" name="daform">
+                    <div>
+                        <div class="padding_inbody">
+                            <div class="label">Title</div>
+                            <div class="separator">:</div>
+                            <div class="input_text">
+                                <label for="title">
+                                    <input name="title" type="text" class="field-teks" id="title" size="50" maxlength="15" ></input>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="padding_inbody">
+                            <div class="label">Type File</div>
+                            <div class="separator">:</div>
+                            <div class="input_text">
+                                <label for="typelink"><input id="typelink" name="type" type="radio" value="link"></input>Link</label>
+                                <label for="typeimage"><input id="typeimage" name="type" type="radio" value="image"></input>Image</label>
+                                <label for="typevideo"><input id="typevideo" name="type" type="radio" value="video"></input>Video</label>   
+                            </div>
+                        </div>
+                        <div class="padding_inbody">
+                            <div class="label">Post Link</div>
+                            <div class="separator">:</div>
+                            <div class="input_text">
+                                <label for="link">
+                                    <input name="link" type="text" class="field-teks" id="link" size="50" maxlength="30" ></input>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="padding_inbody">
+                            <div class="label">Deskripsi Link</div>
+                            <div class="separator">:</div>
+                            <div class="input_text">
+                                <label for="deskripsi_link">
+                                    <textarea name="deskripsi_link" class="field-teks" cols="40" rows="3" id="deskripsi_link"></textarea>   
+                                </label>
+                            </div>
+                        </div>
+                        <div class="padding_inbody">
+                            <div class="label">Post Image</div>
+                            <div class="separator">:</div>
+                            <div class="input_text">
+                                <label>
+                                    <input id="image" type="file" accept="images/jpeg"></input>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="padding_inbody">
+                            <div class="label">Post Link Video</div>
+                            <div class="separator">:</div>
+                            <div class="input_text">
+                                <label for="video">
+                                    <input name="video" type="text" class="field-teks" id="video" size="50" maxlength="30" ></input>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="padding_inbody">
+                                <label>
+                                    <input name="tombol" type="button" value="post" 
+                                           onclick="preview(document.getElementById('title'),
+                                                document.getElementById('link'),
+                                                getCheckedValue(document.daform.elements['type']),
+                                                document.getElementById('deskripsi_link'),
+                                                document.getElementById('image'),
+                                                document.getElementById('video'))"></input>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    </form>     
+                </div>
                 <div class="top_content">
                     <img src="images/orn_bottom.jpg" alt="dafuq"></img><br />
                 </div>
