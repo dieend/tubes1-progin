@@ -104,3 +104,40 @@ div .input_text{
     z-index: 50;
     background: white;
 }
+.content{
+    padding: 1em 2em;
+    margin: 2em;
+    border-right-style: double;
+    border-left-style: double;
+    border-bottom-style: double;
+    border-top-style: double;
+    border-right-width: 4px;
+    border-left-width: 4px;
+    border-bottom-width: 4px;
+    border-top-width: 4px;
+    border-right-color: olive;
+    border-left-color: olive;
+    border-bottom-color: olive;
+    border-top-color: olive;
+}
+.content_signature {
+    
+    display: inline-block;
+    width: 20%;
+}
+.content_caption {
+   
+    vertical-align: top;
+}
+.content_body {
+    width: 70%;
+    display: inline-block;
+}
+.like_button{
+    width: 30px;
+    height: 30px;
+}
+.unlike_button{
+    width: 30px;
+    height: 30px;
+}
