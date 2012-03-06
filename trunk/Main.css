@@ -78,10 +78,29 @@ li:hover{
     vertical-align: top;
     margin-top: 40px;
 }
+div .label {
+    display: inline-block;
+    width: 10em;
+}
+div .separator {
+    display: inline-block;
+}
+div .input_text{
+    display: inline-block;    
+}
+.padding_inbody{
+    padding-top: 0em;
+    padding-left:  2em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+}
 
 .hidden_preview{
     display: none;
 }
 .preview {
     display: block;
+    position: absolute;
+    z-index: 50;
+    background: white;
 }
