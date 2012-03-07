@@ -4,7 +4,7 @@ body{
     background-repeat: repeat-y;
     background-color: white;
     font-family: sans-serif, fantasy;
-    font-size: 12;
+    font-size: 12px;
     margin-top: 0px;
     margin-bottom: 0px;
 }
@@ -63,8 +63,8 @@ li:hover{
     color: black;
 }
 #header_gambar{
-    width: 800;
-    height: 250;
+    width: 800px;
+    height: 250px;
 }
 .top_content{
     background-color: white;
@@ -139,4 +139,63 @@ div .input_text{
 .unlike_button{
     width: 30px;
     height: 30px;
+}
+.like_button2{
+    width: 50px;
+    height: 50px;
+    margin-left: 250px;
+    margin-right: 50px;
+}
+.unlike_button2{
+    width: 50px;
+    height: 50px;
+    margin-left: 50px
+}
+.blue {
+    background-color: black;
+    width: 746px;
+    height: 42px;
+    margin-left: 28px;
+    margin-right: 32px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    float: inherit;
+    font-size: 12px;
+    font-weight: bold;
+}
+.yui_judul{
+    font-size: 24px;
+    margin-left: 280px;
+    height: 10px;
+    color: white;
+}
+#yui_image{
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+#yui_like label{
+    font-size: 20px;
+    color: darkgreen;
+    vertical-align: 20px;
+}
+#komentar{
+    margin: 2em;
+}
+#profpic {
+    height: 75px;
+    width: 13%;
+    vertical-align: top;
+    border: black;
+}
+#pelengkap{
+    width: 30%;
+    display: inline-block;
+}
+#pelengkap h2{
+    color: blue;
+    font-weight: bold;
+}
+#text{
+    border: double;
+    border-color: black;
 }

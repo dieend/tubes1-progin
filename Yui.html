@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <title>TUGAS BESAR PROGIN 1</title>
+        <link href="Main.css" type="text/css" rel="stylesheet" media="screen"/>
+        <script type="text/javascript" src="assets/like.js"></script>
+    </head>
+    
+    <body>
+        <div id="bagian_luar">
+            <div id="luar">
+                <div id="kepala">
+                    <a href="Main.html"><img src="images/logo.jpg" width="300" height="150" alt="dafuq"></img> </a>
+                </div>
+                <div id="cari"></div>
+                <div id="list_menu">
+                    <ul>
+                        <li><a href="Main.html">HOME</a></li>
+                        <li><a href="Content.html">Content</a></li>
+                        <li><a href="Post.html">Post</a></li>
+                        <li><a href="MENU5.html">Change Theme</a></li>
+                        <li><a href="Daftar.html">Sign up</a></li>
+                    </ul>
+                </div>
+                <div id="header_gambar">
+                    <img src="images/header.jpg" width="800" height="200" alt="dafuq"></img>
+                </div>
+                <div class="top_content">
+                    <img src="images/orn_top.jpg" alt="dafuq"></img><br />
+                </div>
+                <div id="judul_post">
+                    <div class="blue">
+                        <div class ="yui_judul"><h2>Yui Yoshioka</h2></div>
+                    </div>     
+                </div>
+                <div class="content">
+                    <div id="yui_image">
+                        <img src="images/yui.jpg" alt="gambar"></img>
+                    </div>
+                    <div id="yui_like">
+                        <img src="images/like.jpg" class="like_button2" onclick="doLike(1)" alt="image"></img>
+                        <label class="vote no_vote" id="like_vote1"></label>
+                        <img src="images/dislike.jpg" class="unlike_button2" onclick="doUnlike(1)" alt="image"></img>
+                    </div>
+                </div>
+                <div id="komentar">
+                    <img src="images/yaoming.jpg" id="profpic" alt="image"></img>
+                    <div id="pelengkap">
+                        <h2>Anonymous</h2>
+                        <p>07-03-2012</p>
+                    </div>
+                    <div><textarea id="text" cols="80" rows="4"></textarea></div>
+                </div>    
+                    
+                
+                <div class="top_content">
+                    <img src="images/orn_bottom.jpg" alt="dafuq"></img><br />
+                </div>
+                <div id="footer">
+                    Copyright dafuq <br /><br />
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            initRandomLike(1);
+        </script>
+    </body>
+</html>
