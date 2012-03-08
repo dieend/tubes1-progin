@@ -50,9 +50,13 @@ function getCheckedValue(radioObj) {
 
 function getDate() {
     var dTime = new Date();
-    return dTime.getDate()+ "-" + dTime.getMonth() + "-" + dTime.getFullYear(); //+ " " + period
+    return dTime.getDate()+ "-" + dTime.getMonth() + "-" + dTime.getFullYear() + 
+        "\n" + pad2(dTime.getHours()) + ":" + pad2(dTime.getMinutes()); //+ " " + period
 }
- 
+function pad2(number) {  
+     return (number < 10 ? '0' : '') + number
+   
+}
 function useLink(){
     document.getElementById("link").disabled = false;
     document.getElementById("deskripsi_link").disabled = false;

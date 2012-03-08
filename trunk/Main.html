@@ -1,8 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
     <head>
         <title>TUGAS BESAR PROGIN 1</title>
-        <link href="Main.css" type="text/css" rel="stylesheet" media="screen"/>
+        <link id="CSS" href="Main.css" type="text/css" rel="stylesheet" media="screen"/>
+        <script type="text/javascript" src="assets/like.js"></script>
     </head>
     
     <body>
@@ -17,7 +19,7 @@
                         <li><a href="Main.html">HOME</a></li>
                         <li><a href="Content.html">Content</a></li>
                         <li><a href="Post.html">Post</a></li>
-                        <li><a href="MENU5.html">Change Theme</a></li>
+                        <li><a onclick="changeCSS()">Change Theme</a></li>
                         <li><a href="Daftar.html">Sign up</a></li>
                     </ul>
                 </div>
@@ -29,7 +31,92 @@
                 </div>
                 <div id="paragraph">
                     <h2>Welcome to our website</h2>
-                    <p>Dafuq is this</p>
+                </div>
+                <div>
+                    <div id="content_1" class="content">
+                        <div class="content_data">
+                            <div class="content_header">
+                                <div><h2><a href="Yui.html">Type Link</a></h2></div>
+                            </div>
+                            <div class="content_body">
+                                <div class="content_caption">
+                                    <p>dagajflkasjdlksajd;ksajf;slafmk;asmf;kasmf
+                                    ldsadskajdklsajdklsajdsdasdasfasfasfasdfasddsadksladjkl</p>
+                                </div>
+                                <div class="content_entry content_type_link">    
+                                    <p>9gag.com</p>
+                                </div>
+                            </div>
+                            <div class="content_signature">
+                                <div>
+                                    <h3 class="content_date">03-03-2012</h3>
+                                    <p class="content_poster">posted by dafuq</p>
+                                    <p>-----------------------</p>
+                                    <label class="vote no_vote" id="like_vote1"></label>
+                                </div>
+                                <div id="button1">
+                                    <img src="images/like.jpg" class="like_button" onclick="doLike(1)"></img>
+                                    <img src="images/minus.jpg" alt="minus" width="30" height="50"></img>
+                                    <img src="images/dislike.jpg" class="unlike_button" onclick="doUnlike(1)"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="content_2" class="content">
+                        <div class="content_data">
+                            <div class="content_header">
+                                <div><h2><a href="Yui.html">Yoshioka Yui</a></h2></div>
+                            </div>
+                            <div class="content_body">
+                                <div class="content_caption"></div>
+                                <div class="content_entry content_type_image">
+                                    <img src="images/yui.jpg" alt="gambar" width="300" height="150"></img>
+                                </div>
+                            </div>
+                            <div class="content_signature">
+                                <div>
+                                    <h3 class="content_date">03-03-2012</h3>
+                                    <p class="content_poster">posted by dafuq</p>
+                                    <p>-----------------------</p>
+                                    <label class="vote no_vote" id="like_vote2"></label>
+                                </div>
+                                <div id="button2">
+                                    <img src="images/like.jpg" class="like_button" onclick="doLike(2)"></img>
+                                    <img src="images/minus.jpg" alt="minus" width="30" height="50"></img>
+                                    <img src="images/dislike.jpg" class="unlike_button" onclick="doUnlike(2)"></img>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="content_3" class="content">
+                        <div class="content_data">
+                            <div class="content_header">
+                                <div ><h2><a href="Yui.html">Type Video</a></h2></div>
+                            </div>
+                            <div class="content_body">
+                                <div class="content_caption"></div>
+                                <div class="content_entry content_type_video">
+                                    <object type="application/x-shockwave-flash" style="width:300px; height:200px;" data="http://www.youtube.com/v/7_6B6vwE83U">
+                                        <param name="movie" value="http://www.youtube.com/v/7_6B6vwE83U" /></object>
+                                </div>
+                            </div>
+                            <div class="content_signature">
+                                <div>
+                                    <h3>03-03-2012</h3>
+                                    <p>posted by dafuq</p>
+                                    <p>---------------</p>
+                                    <label class="vote no_vote" id="like_vote3"></label>
+                                </div>
+                                <div id="button3">
+                                    <img onclick="doLike(3)" class="like_button" src="images/like.jpg"></img>
+                                    <img src="images/minus.jpg" alt="minus" width="30" height="50"></img>
+                                    <img src="images/dislike.jpg" class="unlike_button" onclick="doUnlike(3)"></img>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="top_content">
                     <img src="images/orn_bottom.jpg" alt="dafuq"></img><br />
@@ -39,5 +126,8 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+            initRandomSortedLike(3);
+        </script>
     </body>
 </html>

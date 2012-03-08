@@ -2,8 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
     <head>
         <title>TUGAS BESAR PROGIN 1</title>
-        <link href="Main.css" type="text/css" rel="stylesheet" media="screen"/>
+        <link id="CSS" href="Main.css" type="text/css" rel="stylesheet" media="screen"/>
         <script type="text/javascript" src="assets/preview.js"></script>
+        <script type="text/javascript" src="assets/like.js"></script>
     </head>
     
     <body>
@@ -18,7 +19,7 @@
                         <li><a href="Main.html">HOME</a></li>
                         <li><a href="Content.html">Content</a></li>
                         <li><a href="Post.html">Post</a></li>
-                        <li><a href="MENU5.html">Change Theme</a></li>
+                        <li><a onclick="changeCSS()">Change Theme</a></li>
                         <li><a href="Daftar.html">Sign up</a></li>
                     </ul>
                 </div>
@@ -54,12 +55,12 @@
                                     <h3 id="preview_date" class="content_date"></h3>
                                     <p class="content_poster">posted by dafuq</p>
                                     <p>-----------------------</p>
-                                    <label class="vote no_vote" id="like_vote1"></label>
+                                    <label class="vote no_vote" id="like_vote1">0</label>
                                 </div>
                                 <div id="button1">
-                                    <img src="images/like.jpg" class="like_button" onclick="doLike()"></img>
+                                    <img src="images/like.jpg" class="like_button" onclick="doLike(1)"></img>
                                     <img src="images/minus.jpg" alt="minus" width="30" height="50"></img>
-                                    <img src="images/dislike.jpg" class="unlike_button" onclick="doUnlike()"></img>
+                                    <img src="images/dislike.jpg" class="unlike_button" onclick="doUnlike(1)"></img>
                                 </div>
                             </div>
                         </div>

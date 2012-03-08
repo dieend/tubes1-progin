@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"> 
     <head>
         <title>TUGAS BESAR PROGIN 1</title>
-        <link href="Main.css" type="text/css" rel="stylesheet" media="screen"/>
+        <link id="CSS" href="Main.css" type="text/css" rel="stylesheet" media="screen"/>
 	<script type="text/javascript" src="Daftar.js" />
         <script type="text/javascript">
             window.onload();
@@ -22,7 +22,7 @@
                         <li><a href="Main.html">HOME</a></li>
                         <li><a href="Content.html">Content</a></li>
                         <li><a href="Post.html">Post</a></li>
-                        <li><a href="MENU5.html">Change Theme</a></li>
+                        <li><a onclick="changeCSS()">Change Theme</a></li>
                         <li><a href="Daftar.html">Sign up</a></li>
                     </ul>
                 </div>
@@ -37,71 +37,125 @@
                     <form id="registrasi" action="Content.html" method="post">
                         <div class="content">
                             <div class="daftar_element">
-                                <label>Username</label>
-                                :
-                                <label>
-                                    <input name="username" type="text" class="field-teks" id="username" size="50" value="" />    
-                                </label>
+                                <div class="label">
+                                    <label>Username</label>
+                                </div>
+                                <div class="separator">
+                                    :
+                                </div>
+                                <div class="input">
+                                    <label>
+                                        <input name="username" type="text" class="field-teks" id="username" size="50" value="" />    
+                                    </label>
+                                </div>
                             </div>
                             <div class="daftar_element">
+                                <div class="label">
                                 <label>Password</label>
-                                :    
+                                </div>
+                                <div class="separator">
+                                    :    
+                                </div>
+                                <div class="input">
                                 <label>
                                     <input name="password" type="password" class="field-teks" id="password" size="50" />    
                                 </label>
+                                </div>
                             </div>
-                            <div class="daftar_element1">
+                            <div class="daftar_element">
+                                <div class="label">
                                 <label>Confirm Password</label>
+                                </div>
+                                <div class="separator">
                                 :
+                                </div>
+                                <div class="input">
                                 <label>
                                     <input name="confirm_password" type="password" class="field-teks" id="confirm_password" size="50" />    
                                 </label>      
+                                </div>
                             </div>
-                            <div class="daftar_element2">
+                            <div class="daftar_element">
+                                <div class="label">
                                 <label>Full Name</label>
+                                </div>
+                                <div class="separator">
                                 :
+                                </div>
+                                <div class="input">
                                 <label>
                                     <input name="full_name" type="text" class="field-teks" id="full_name" size="50" />    
                                 </label>
+                                </div>
                             </div>            
-                            <div class="daftar_element7">                
+                            <div class="daftar_element">
+                                <div class="label">
                                 <label>Birth Date(yyyy-mm-dd)</label>
+                                </div>
+                                <div class="separator">
                                 :
+                                </div>
+                                <div class="input">
                                 <label><input name="tahun" type="text" id="tahun" size="8" maxlength="4" /></label>-
+                                </div>
+                                <div class="input">
                                 <label><input name="bulan" type="text" id="bulan" size="4" maxlength="2" /></label>-
+                                </div>
+                                <div class="input">
                                 <label><input name="hari" type="text" id="hari" size="4" maxlength="2" /></label>
-                            </div>               
+                                </div>               
                             
-                            <div class="daftar_element3">                
+                            <div class="daftar_element">
+                                <div class="label">
                                 <label>Email</label>
+                                </div>
+                                <div class="separator">
                                 :
+                                </div>
+                                <div class="input">
                                 <label>
-                                    <input name="email" type="text" class="field-teks" id="email" size="50" />    
+                                    <input name="email" type="text" class="field-teks" id="email" size="50" />
                                 </label>
+                                </div>
                             </div>                
-                            <div class="daftar_element4">                
+                            <div class="daftar_element">                
+                                <div class="label">
                                 <label>Upload Avatar</label>
+                                </div>
+                                <div class="separator">
                                 :
-                                <label>
+                                </div>
+                                <div class="input">
+                                <label >
                                     <input type="file" accept="images/jpeg,images/jpg" name="avatar" id="avatar"></input>
                                 </label>
+                                </div>
                             </div>                
-                            <div class="daftar_element5">                
+                            <div class="daftar_element">                
+                                <div class="label">
                                 <label>Gender</label>
+                                </div>
+                                <div class="separator">
                                 :
+                                </div>
+                                <div class="input">
                                 <label>
                                     <select name="gender" id="gender">
                                         <option value="man">Man</option>
                                         <option value="women">Women</option>
                                     </select>
                                 </label>
+                                </div>
                             </div>                
-                            <div class="daftar_element6">                
-                                <label>About Me</label>
-                                :
-                                <label>
+                            <div class="daftar_element">
+                                <div class="label">
+                                    <label>About Me</label>
+                                </div>
+                                <div class="separator">:</div>
+                                <div class="input"><label>
                                     <textarea name="about" class="field-teks" cols="40" rows="6" id="about"></textarea>   
                                 </label>
+                                </div>
                             </div>                
                                 <div>                
                                 <label>
