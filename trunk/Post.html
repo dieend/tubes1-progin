@@ -84,9 +84,9 @@
                             <div class="label">Type File</div>
                             <div class="separator">:</div>
                             <div class="input_text">
-                                <label for="typelink"><input id="typelink" name="type" type="radio" value="link"></input>Link</label>
-                                <label for="typeimage"><input id="typeimage" name="type" type="radio" value="image"></input>Image</label>
-                                <label for="typevideo"><input id="typevideo" name="type" type="radio" value="video"></input>Video</label>   
+                                <label for="typelink"><input id="typelink" name="type" type="radio" value="link" onclick="useLink()"></input>Link</label>
+                                <label for="typeimage"><input id="typeimage" name="type" type="radio" value="image" onclick="useImage()"></input>Image</label>
+                                <label for="typevideo"><input id="typevideo" name="type" type="radio" value="video" onclick="useVideo()"></input>Video</label>   
                             </div>
                         </div>
                         <div class="padding_inbody">
@@ -94,7 +94,7 @@
                             <div class="separator">:</div>
                             <div class="input_text">
                                 <label for="link">
-                                    <input name="link" type="text" class="field-teks" id="link" size="50" maxlength="30" ></input>
+                                    <input disabled="" name="link" type="text" class="field-teks" id="link" size="50" maxlength="30" ></input>
                                 </label>
                             </div>
                         </div>
@@ -103,7 +103,7 @@
                             <div class="separator">:</div>
                             <div class="input_text">
                                 <label for="deskripsi_link">
-                                    <textarea name="deskripsi_link" class="field-teks" cols="40" rows="3" id="deskripsi_link"></textarea>   
+                                    <textarea disabled="" name="deskripsi_link" class="field-teks" cols="40" rows="3" id="deskripsi_link"></textarea>   
                                 </label>
                             </div>
                         </div>
@@ -112,7 +112,7 @@
                             <div class="separator">:</div>
                             <div class="input_text">
                                 <label>
-                                    <input id="image" type="file" accept="images/jpeg"></input>
+                                    <input disabled="" id="image" type="file" accept="images/jpeg"></input>
                                 </label>
                             </div>
                         </div>
@@ -121,7 +121,7 @@
                             <div class="separator">:</div>
                             <div class="input_text">
                                 <label for="video">
-                                    <input name="video" type="text" class="field-teks" id="video" size="50" maxlength="30" ></input>
+                                    <input name="video" disabled="" type="text" class="field-teks" id="video" size="50" maxlength="30" ></input>
                                 </label>
                             </div>
                         </div>
