@@ -1,3 +1,5 @@
+
+
 function hide_preview(){
     document.getElementById("konten").className = "hidden_preview";
 }
@@ -49,5 +51,23 @@ function getCheckedValue(radioObj) {
 function getDate() {
     var dTime = new Date();
     return dTime.getDate()+ "-" + dTime.getMonth() + "-" + dTime.getFullYear(); //+ " " + period
- }
+}
  
+function useLink(){
+    document.getElementById("link").disabled = false;
+    document.getElementById("deskripsi_link").disabled = false;
+    document.getElementById("image").disabled = true;
+    document.getElementById("video").disabled = true;
+}
+function useImage(){
+    document.getElementById("link").disabled = true;
+    document.getElementById("deskripsi_link").disabled = true;
+    document.getElementById("image").disabled = false;
+    document.getElementById("video").disabled = true;
+}
+function useVideo(){
+    document.getElementById("link").disabled = true;
+    document.getElementById("deskripsi_link").disabled = true;
+    document.getElementById("image").disabled = true;
+    document.getElementById("video").disabled = false;
+}
