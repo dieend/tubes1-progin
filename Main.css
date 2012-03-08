@@ -80,16 +80,7 @@ li:hover{
     vertical-align: top;
     margin-top: 40px;
 }
-div .label {
-    display: inline-block;
-    width: 10em;
-}
-div .separator {
-    display: inline-block;
-}
-div .input_text{
-    display: inline-block;    
-}
+
 .padding_inbody{
     padding-top: 0em;
     padding-left:  2em;
@@ -183,13 +174,13 @@ div .input_text{
 #komentar{
     margin: 2em;
 }
-#profpic {
+.profpic {
     height: 75px;
     width: 13%;
     vertical-align: top;
     border: black;
 }
-#pelengkap{
+.pelengkap{
     width: 30%;
     display: inline-block;
 }
@@ -201,86 +192,29 @@ div .input_text{
     border: double;
     border-color: black;
 }
-.daftar_element label{
-    margin-right: 80px;
-    vertical-align: middle;
-    margin-left: 15px;
+div .label {
+    display: inline-block;
+    width: 10em;
 }
-.daftar_element input{
-    margin-bottom: 10px;
-    border: double;
-    border-color: blue;
+div .separator {
+    display: inline-block;
 }
-.daftar_element1 label{
-    margin-right: 35px;
-    vertical-align: middle;
-    margin-left: 15px;
+div .input_text{
+    display: inline-block;
 }
-.daftar_element1 input{
-    margin-bottom: 10px;
-    border: double;
-    border-color: blue;
-}
-.daftar_element2 label{
-    margin-right: 81px;
-    vertical-align: middle;
-    margin-left: 15px;
-}
-.daftar_element2 input{
-    margin-bottom: 10px;
-    border: double;
-    border-color: blue;
-}
-.daftar_element3 label{
-    margin-right: 107px;
-    vertical-align: middle;
-    margin-left: 15px;
-}
-.daftar_element3 input{
-    margin-bottom: 10px;
-    border: double;
-    border-color: blue;
-}
-.daftar_element4 label{
-    margin-right: 63px;
-    vertical-align: middle;
-    margin-left: 15px;
-}
-.daftar_element4 input{
-    margin-bottom: 10px;
-    border: double;
-    border-color: blue;
-}
-.daftar_element5 label{
-    margin-right: 98px;
-    vertical-align: middle;
-    margin-left: 15px;
-}
-.daftar_element5 select{
-    margin-bottom: 10px;
-    border: double;
-    border-color: blue;
-}
-.daftar_element6 label{
-    margin-right: 90px;
-    vertical-align: top;
-    margin-left: 15px;
-}
-.daftar_element6 input{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: double;
-    border-color: blue;
-}
-.daftar_element7 label{
-    margin: 14px;
+.daftar_element.label{
+    width: 10em;
     vertical-align: middle;
 }
-.daftar_element7 input{
-    margin-bottom: 10px;
+.daftar_element .separator{
+    display: inline-block;
+}
+.daftar_element .input{
+    display: inline-block;
     border: double;
     border-color: blue;
 }
+
 #submit_button{
     margin-left: 178px;
     margin-top: 20px;

@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
     <head>
         <title>TUGAS BESAR PROGIN 1</title>
-        <link href="Main.css" type="text/css" rel="stylesheet" media="screen"/>
+        <link id="CSS" href="Main.css" type="text/css" rel="stylesheet" media="screen"/>
+        <script type="text/javascript" src="assets/preview.js"></script>
         <script type="text/javascript" src="assets/like.js"></script>
     </head>
     
@@ -18,7 +19,7 @@
                         <li><a href="Main.html">HOME</a></li>
                         <li><a href="Content.html">Content</a></li>
                         <li><a href="Post.html">Post</a></li>
-                        <li><a href="MENU5.html">Change Theme</a></li>
+                        <li><a onclick="changeCSS()">Change Theme</a></li>
                         <li><a href="Daftar.html">Sign up</a></li>
                     </ul>
                 </div>
@@ -33,7 +34,7 @@
                         <div class ="yui_judul"><h2>Yui Yoshioka</h2></div>
                     </div>     
                 </div>
-                <div class="content">
+                <div id="konten" class="content">
                     <div id="yui_image">
                         <img src="images/yui.jpg" alt="gambar"></img>
                     </div>
@@ -44,14 +45,21 @@
                     </div>
                 </div>
                 <div id="komentar">
-                    <img src="images/yaoming.jpg" id="profpic" alt="image"></img>
-                    <div id="pelengkap">
-                        <h2>Anonymous</h2>
-                        <p>07-03-2012</p>
+                    <div class="acomment">
+                        <img src="images/yaoming.jpg" class="profpic" alt="image"></img>
+                        <div class="pelengkap">
+                            <h2>Anonymous</h2>
+                            <p>07-03-2012 20:39</p>
+                        </div>
+                        <p>hehe</p>
                     </div>
-                    <div><textarea id="text" cols="80" rows="4"></textarea></div>
-                </div>    
+                    <div id="marker"><textarea id="text" cols="80" rows="4"></textarea></div>
+                    <div>
+                        <input type="button" onclick="post_comment()" value="ok"></input>
+                    </div>
                     
+                </div>    
+                
                 
                 <div class="top_content">
                     <img src="images/orn_bottom.jpg" alt="dafuq"></img><br />
@@ -62,7 +70,7 @@
             </div>
         </div>
         <script type="text/javascript">
-            initRandomLike(1);
+            initRandomLikeMax(1);
         </script>
     </body>
 </html>
