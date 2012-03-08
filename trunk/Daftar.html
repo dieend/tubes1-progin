@@ -14,7 +14,7 @@
         <div id="bagian_luar">
             <div id="luar">
                 <div id="kepala">
-                    <a href="Main.html"><img src="images/logo.jpg" width="300" height="150" alt="dafuq"></img> </a>
+                    <div id="logo"><a href="Main.html"><img src="images/logo.jpg" width="450" height="150" alt="dafuq"></img></a></div>
                 </div>
                 <div id="cari"></div>
                 <div id="list_menu">
@@ -35,92 +35,80 @@
                 <div id="sign">
                     <br />
                     <form id="registrasi" action="Content.html" method="post">
-                        <table>
-                            <tr>
-                                <td>Username</td>
-                                <td>:</td>
-                                <td>
-                                    <label>
-                                        <input name="username" type="text" class="field-teks" id="username" size="50" value="" />    
-                                    </label></td>
-                            </tr>
-                            <tr>
-                                <td >Password</td>
-                                <td >:</td>
-                                <td >
-                                    <label>
-                                        <input name="password" type="password" class="field-teks" id="password" size="50" />    
-                                    </label></td>
-                            </tr>
-                            <tr>
-                                <td >Confirm Password</td>
-                                <td >:</td>
-                                <td >
-                                    <label>
-                                        <input name="confirm_password" type="password" class="field-teks" id="confirm_password" size="50" />    
-                                    </label></td>
-                            </tr>
-                            <tr>
-                                <td>Full Name</td>
-                                <td>:</td>
-                                <td>
-                                    <label>
-                                        <input name="full_name" type="text" class="field-teks" id="full_name" size="50" />    
-                                    </label></td>
-                            </tr>
-                            <tr>
-                                <td >Birth Date(yyyy-mm-dd)</td>
-                                <td>:</td>
-                                <td>   
-                                    <label><input name="tahun" type="text" id="tahun" size="8" maxlength="4" /></label> -
-                                    <label><input name="bulan" type="text" id="bulan" size="4" maxlength="2" /></label> -
-                                    <label><input name="hari" type="text" id="hari" size="4" maxlength="2" /></label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Email</td>
-                                <td>:</td>
-                                <td>
-                                    <label>
-                                        <input name="email" type="text" class="field-teks" id="email" size="50" />    
-                                    </label></td>
-                            </tr>
-                            <tr>
-                                <td>Upload Avatar</td>
-                                <td>:</td>
-                                <td>
-                                    <label>
-                                        <input type="file" accept="images/jpeg" name="avatar" id="avatar"></input>
-                                    </label></td>
-                            </tr>
-                            <tr>
-                                <td>Gender</td>
-                                <td>:</td>
-                                <td>
-                                    <label>
-                                        <select name="gender" id="gender">
-                                            <option value="man">Man</option>
-                                            <option value="scumbag">Women</option>
-                                        </select>
-                                    </label></td>
-                            </tr>
-                            <tr>
-                                <td>About Me</td>
-                                <td>:</td>
-                                <td>
-                                    <label>
-                                        <textarea name="about" class="field-teks" cols="40" rows="6" id="about"></textarea>   
-                                    </label></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <label>
-                                        <input type="submit" value="submit" class="tombol" onclick="" id="submit_button"/>
-                                    </label></td>
-                            </tr>
-                        </table>
+                        <div class="content">
+                            <div class="daftar_element">
+                                <label>Username</label>
+                                :
+                                <label>
+                                    <input name="username" type="text" class="field-teks" id="username" size="50" value="" />    
+                                </label>
+                            </div>
+                            <div class="daftar_element">
+                                <label>Password</label>
+                                :    
+                                <label>
+                                    <input name="password" type="password" class="field-teks" id="password" size="50" />    
+                                </label>
+                            </div>
+                            <div class="daftar_element1">
+                                <label>Confirm Password</label>
+                                :
+                                <label>
+                                    <input name="confirm_password" type="password" class="field-teks" id="confirm_password" size="50" />    
+                                </label>      
+                            </div>
+                            <div class="daftar_element2">
+                                <label>Full Name</label>
+                                :
+                                <label>
+                                    <input name="full_name" type="text" class="field-teks" id="full_name" size="50" />    
+                                </label>
+                            </div>            
+                            <div class="daftar_element7">                
+                                <label>Birth Date(yyyy-mm-dd)</label>
+                                :
+                                <label><input name="tahun" type="text" id="tahun" size="8" maxlength="4" /></label>-
+                                <label><input name="bulan" type="text" id="bulan" size="4" maxlength="2" /></label>-
+                                <label><input name="hari" type="text" id="hari" size="4" maxlength="2" /></label>
+                            </div>               
+                            
+                            <div class="daftar_element3">                
+                                <label>Email</label>
+                                :
+                                <label>
+                                    <input name="email" type="text" class="field-teks" id="email" size="50" />    
+                                </label>
+                            </div>                
+                            <div class="daftar_element4">                
+                                <label>Upload Avatar</label>
+                                :
+                                <label>
+                                    <input type="file" accept="images/jpeg,images/jpg" name="avatar" id="avatar"></input>
+                                </label>
+                            </div>                
+                            <div class="daftar_element5">                
+                                <label>Gender</label>
+                                :
+                                <label>
+                                    <select name="gender" id="gender">
+                                        <option value="man">Man</option>
+                                        <option value="women">Women</option>
+                                    </select>
+                                </label>
+                            </div>                
+                            <div class="daftar_element6">                
+                                <label>About Me</label>
+                                :
+                                <label>
+                                    <textarea name="about" class="field-teks" cols="40" rows="6" id="about"></textarea>   
+                                </label>
+                            </div>                
+                                <div>                
+                                <label>
+                                    <input type="submit" value="submit" class="tombol" onclick="" id="submit_button"/>
+                                </label>
+                            </div>
+                        </div>
                     </form>     
                 </div>
                 <div class="top_content">
